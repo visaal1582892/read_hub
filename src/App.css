@@ -1,1 +1,5 @@
+@import "tailwindcss";
 
+a{
+    @apply text-orange-600 mx-5 leading-4 text-center sm:mx-8 font-semibold;
+}
