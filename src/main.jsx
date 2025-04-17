@@ -4,7 +4,8 @@ import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 import Home from './components/Home.jsx'
-import BrowseBooks from './components/BrowseBooks.jsx'
+import BrowseBooks 
+from './components/BrowseBooks.jsx'
 import { Provider } from 'react-redux'
 import store from './utils/store.js'
 
@@ -21,16 +22,16 @@ const appRouter = createBrowserRouter([
       {
         path: 'browseBooks',
         element: <BrowseBooks />,
-        children: [
-          {
-            index: true,
-            element: <div>All Books</div>,
-          },
-          {
-            path: ':category',
-            element: <div>Category</div>,
-          }
-        ]
+        // children: [
+        //   {
+        //     index: true,
+        //     element: <div>All Books</div>,
+        //   },
+        //   {
+        //     path: ':category',
+        //     element: <div>Category</div>,
+        //   }
+        // ]
       },
       {
         path: 'addBook',

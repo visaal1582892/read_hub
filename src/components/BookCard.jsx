@@ -1,12 +1,14 @@
 import React from 'react'
 
-const BookCard = () => {
+const BookCard = (props) => {
   return (
-    <article className='flex flex-col items-center justify-center bg-white rounded-lg shadow-lg shadow-gray-200 p-4 border-2 border-blue-500'>
-        <img src="/images/favIcon.png" alt="image" className='h-36 w-16' />
-        <h3 className='text-[1.5em] text-blue-600 font-semibold'>Book Title</h3>
-        <p className='text-sm text-gray-600'>Author Name</p>
-        <p className='text-sm text-gray-600'>1940</p>
+    <article className='flex flex-col items-center justify-between rounded-md shadow-lg shadow-gray-200 basis-40 h-60 grow-0 shrink-0 snap-center snap-always bg-white border-2 border-blue-500 hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer'>
+        <img src='https://png.pngtree.com/template/20210908/ourmid/pngtree-creative-and-realistic-book-dummy-image_633548.jpg' alt="image" className='w-[100%] h-[50%] rounded-md' />
+        <div className='flex flex-col items-center justify-between w-[100%] h-[50%] p-2'>
+        <h3 className='text-[1em] text-blue-600 font-semibold text-center '>{props.book.title}</h3>
+        <p className='text-sm text-gray-600 text-center'>{props.book.author}</p>
+        <p className='text-sm text-gray-600 text-center'>{props.book.publication_year}</p>
+        </div>
     </article>
   )
 }

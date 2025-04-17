@@ -1,11 +1,9 @@
 import { useState } from 'react';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
 import { Outlet } from 'react-router-dom';
 import useFetch from './utils/useFetch';
 import './App.css';
-import store from './utils/store';
 
 function App() {
 
@@ -13,11 +11,11 @@ function App() {
   useFetch('/api/v1/books');
 
   return (
-    <>
+    <div className='w-[100vw] flex flex-col items-center'>
       <Header />
       <Navbar />
       <Outlet />
-    </>
+    </div>
   )
 }
 

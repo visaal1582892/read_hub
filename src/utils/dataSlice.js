@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const dataSlice=createSlice({
     name: 'data',
     initialState: {
-        data: [],
+        books: [],
         loading: false,
         error: null
     },
@@ -11,8 +11,8 @@ const dataSlice=createSlice({
         setLoading: (state,action) => {
             state.loading = action.payload;
         },
-        setData: (state, action) => {
-            state.data=action.payload;
+        setBooks: (state, action) => {
+            state.books=action.payload;
         },
         setError: (state,action) => {
             state.error=action.payload;
@@ -20,5 +20,5 @@ const dataSlice=createSlice({
     }
 })
 
-export const { setLoading, setData, setError } = dataSlice.actions;
+export const { setLoading, setBooks, setError } = dataSlice.actions;
 export default dataSlice.reducer;
