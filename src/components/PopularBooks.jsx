@@ -1,15 +1,15 @@
 import React from 'react'
 import BookCard from './BookCard'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 const PopularBooks = () => {
 
   // Using selector to get the popular books from the redux store
+  const navigate = useNavigate();
   const loading=useSelector((state) => state.data.loading);
   const error=useSelector((state) => state.data.error);
   const popularBooks = useSelector((state) => state.data.books).slice(0,10);
-  console.log(popularBooks)
 
 
   return (
@@ -26,7 +26,7 @@ const PopularBooks = () => {
               })
             }
         </section>
-        <button className='mt-4'><Link>view more</Link></button>
+        <button className='my-4' onClick={() => navigate('browseBooks/All')}>view more</button>
     </section>
   )
 }

@@ -14,6 +14,11 @@ const usefetch = (url) => {
                 return response.json();
             })
             .then((data) => {
+                // console.log([...data])
+                [...data].map(book => {
+                    book.rating=Math.round(Math.random()*3+2)
+                    return book
+                });
                 dispatch(setBooks(data));
                 dispatch(setError(null));
             })
