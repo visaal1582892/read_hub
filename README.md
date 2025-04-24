@@ -1,6 +1,3 @@
-
----
-
 ```markdown
 # 📚 Read Hub
 
