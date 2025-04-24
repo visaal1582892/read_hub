@@ -16,9 +16,12 @@ const dataSlice=createSlice({
         },
         setError: (state,action) => {
             state.error=action.payload;
+        },
+        addBook: (state,action) => {
+            state.books.unshift(action.payload);
         }
     }
 })
 
-export const { setLoading, setBooks, setError } = dataSlice.actions;
+export const { setLoading, setBooks, setError, addBook } = dataSlice.actions;
 export default dataSlice.reducer;

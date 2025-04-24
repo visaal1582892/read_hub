@@ -3,6 +3,9 @@
 @theme{
   --animate-opening: open 1s ease-in-out forwards;
   --animate-sliding: slide 1.5s cubic-bezier(0.5, 1, 0.25, 1) forwards;
+  --animate-revealing: reveal 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  --animate-timing: time 3s linear 0.5s forwards;
+
   --breakpoint-ss: 330px;
 }
 
@@ -30,6 +33,24 @@
   }
   to{
     transform: translateX(0);
+  }
+}
+
+@keyframes reveal {
+  from{
+    transform: translateX(100%);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+
+@keyframes time{
+  from{
+    width: 100%;
+  }
+  to{
+    width: 0%;
   }
 }
 

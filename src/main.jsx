@@ -9,6 +9,7 @@ from './components/BrowseBooks.jsx'
 import { Provider } from 'react-redux'
 import store from './utils/store.js'
 import BookDetails from './components/BookDetails.jsx'
+import AddBook from './components/AddBook.jsx'
 
 // creating a router configuration
 const appRouter = createBrowserRouter([
@@ -26,7 +27,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: 'addBook',
-        element: <div>Add Book</div>,
+        element: <AddBook />,
       },
       {
         path: 'books/:id',

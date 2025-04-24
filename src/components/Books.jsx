@@ -8,7 +8,7 @@ const Books = (props) => {
     const category=props.category;
 
     // Filtering books based on category and search query
-    const books=useSelector((state) => state.data.books).filter((book) => (category == 'All' || book.genre.includes(category)) && (book.title.toLowerCase().includes(search.toLowerCase()) || book.author.toLowerCase().includes(search.toLowerCase())));
+    const books=useSelector((state) => state.data.books).filter((book) => (category == 'All' || book.genre==category || book.genre.includes(category)) && (book["title"].toLowerCase().includes(search.toLowerCase()) || book["author"].toLowerCase().includes(search.toLowerCase())));
 
     // Using selector to get the loading and error state from the redux store
     const loading=useSelector((state) => state.data.loading);

@@ -1,11 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import dataReducer from "./dataSlice";
-import bookReducer from "./bookSlice";
+// import bookReducer from "./bookSlice";
+import responseReducer from "./responseSlice";
 
 const store = configureStore({
     reducer: {
         data: dataReducer,
-        book: bookReducer
+        response: responseReducer
     }
 })
 
