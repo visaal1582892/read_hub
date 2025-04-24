@@ -1,4 +1,3 @@
-```markdown
 # 📚 Read Hub
 
 **Read Hub** is a sleek, modern web application for exploring and managing a digital library. Users can browse a curated list of books, view detailed descriptions, and manage entries with intuitive forms and validation. Built with React and Tailwind CSS, this project demonstrates clean UI practices and efficient state management using Redux Toolkit.
@@ -25,8 +24,6 @@
 - **State Management:** Redux Toolkit
 - **Icons/Rating:** Custom SVG or font-based icons
 - **Deployment:** Vercel (or insert your platform)
-
----
 
 ## 📸 Screenshots
 
@@ -107,5 +104,3 @@ App is deployed and accessible at:
 
 Made with 💙 by [Rohit Varma Datla]  
 📧 [visaal1582892@gmail.com]  
-
-```
