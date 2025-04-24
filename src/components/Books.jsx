@@ -17,7 +17,7 @@ const Books = (props) => {
     return (
         /* displaying requested books */
         <section className='w-[100%] flex flex-wrap items-center justify-center gap-4 mt-6 mb-6'>
-          <h2 className='text-[1.7em] text-blue-600 font-medium my-4 w-[100%] text-center'>{category} Books</h2>
+          <h2 className='text-[1.5em] text-blue-600 font-medium my-4 w-[100%] text-center'>{category} Books</h2>
           {
             loading ? (<p className='text-center text-2xl text-blue-500 font-medium'>Loading ...</p>) : 
             error ? (<p className='text-center text-2xl text-red-500 font-medium'>Error : Error Occured While Fetching Data</p>) : books.length!=0?books.map((book) => { return <BookCard key={book.id} book={book} /> }): (<p className='text-center text-2xl text-orange-500 font-medium'>No Books Found For Your Search</p>)

@@ -29,7 +29,7 @@ const AddBook = () => {
         else if(data["publication_year"].length==0){
             dispatch(setError("Error: Published year cannot be empty."));
         }
-        else if(data["outline"].length<=5){
+        else if(data["description"].length<=5){
             dispatch(setError("Error: Outline must contain atleast 6 characters."));
         }
         else{
@@ -42,8 +42,8 @@ const AddBook = () => {
 
   return (
     <section className='w-[90%] flex flex-col items-center mb-5'>
-        <h2 className='text-blue-500 text-2xl font-medium text-center mb-5'>Add new books below</h2>
-        <form className='grid grid-cols-7 bg-white w-[100%] p-3 text-lg text-orange-500 items-center rounded-lg gap-4 md:w-lg' onSubmit={(event)=>handleSubmit(event)}>
+        <h2 className='text-blue-500 text-xl font-medium text-center mb-5'>Add new books below</h2>
+        <form className='grid grid-cols-7 bg-white w-[100%] p-3 text-sm text-orange-500 items-center rounded-lg gap-4 md:w-lg' onSubmit={(event)=>handleSubmit(event)}>
             
             {/* Title Input */}
             <label htmlFor="title" className='text-blue-500 col-span-2 font-medium'>Title: </label>
@@ -71,8 +71,8 @@ const AddBook = () => {
             </select>
 
             {/* Description Input */}
-            <label htmlFor="outline" className='text-blue-500 col-span-2 font-medium'>Outline: </label>
-            <textarea name="outline" className='col-span-5 outline-none border-2 border-blue-300 p-1 rounded-md hover:border-blue-500 field-sizing-content min-h-[2.2em]'></textarea>
+            <label htmlFor="description" className='text-blue-500 col-span-2 font-medium'>Outline: </label>
+            <textarea name="description" className='col-span-5 outline-none border-2 border-blue-300 p-1 rounded-md hover:border-blue-500 field-sizing-content min-h-[2.2em]'></textarea>
 
             {/* rating Input */}
             <label htmlFor="rating" className='text-blue-500 col-span-2 font-medium'>Rating: </label>

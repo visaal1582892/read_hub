@@ -14,7 +14,7 @@ const PopularBooks = () => {
 
   return (
     <section className='flex flex-col items-center justify-start my-6 overflow-auto w-[100%] space-y-2' >
-        <h3 className='text-[1.6em] text-blue-600 font-medium'>Popular Books</h3>
+        <h3 className='text-[1.3em] text-blue-600 font-medium'>Popular Books</h3>
         <section className='flex overflow-x-auto w-[85%] snap-x rounded-lg min-h-[30vh] items-center justify-center-safe gap-5 p-3'>
             {
               loading? <p className='text-center text-2xl text-blue-500 font-medium'>Loading...</p> : 

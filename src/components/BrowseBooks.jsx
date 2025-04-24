@@ -23,7 +23,7 @@ const BrowseBooks = () => {
     <main className='flex flex-row justify-center gap-[7%] items-center w-[90%] flex-wrap'>
 
       {/* Search Form */}
-      <form action="." method="post" className='flex flex-col items-center border-2 border-orange-300 rounded-lg w-[90%] sm:w-sm h-20 text-orange-500 font-medium  bg-white p-2 justify-around'>
+      <form action="." method="post" className='flex flex-col items-center border-2 border-orange-300 rounded-lg w-[90%] sm:w-sm h-20 text-orange-500 font-medium  bg-white p-2 justify-around text-sm'>
         <label className='flex items-center w-[90%] justify-around'>
           <img src="/images/searchIcon.png" alt="searchIcon" className='w-8'/>
           <input type="text" placeholder='Search books or authors' name='search' className='border-2 border-blue-300 rounded-lg px-2 py-1 placeholder:text-gray-400/60 outline-none font-medium ml-3 w-[90%] hover:border-blue-500 focus:border-blue-500' value={search} onInput={(event) => handleSearch(event)}/>
@@ -31,7 +31,7 @@ const BrowseBooks = () => {
       </form>
 
       {/* Filter By Category: {category} */}
-      <section className='flex flex-wrap items-center justify-center w-[90%] sm:w-sm h-20 text-orange-500 font-medium bg-white p-2 rounded-lg border-2 border-orange-300'>
+      <section className='flex flex-wrap items-center justify-center w-[90%] sm:w-sm h-20 text-orange-500 font-medium bg-white p-2 rounded-lg border-2 border-orange-300 text-sm'>
         <label className='flex items-center justify-around w-80 font-medium'>
           <p className='text-blue-500'>Filter By</p>
           <select name="category" id="category" value={category} className='border-2 border-blue-300 rounded-lg px-2 py-1 placeholder:text-gray-400/60 outline-none font-medium ml-1 w-[70%] hover:border-blue-500 focus:border-blue-500' onChange={(event) => handleSelect(event)}>

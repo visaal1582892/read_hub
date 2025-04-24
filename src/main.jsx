@@ -10,6 +10,7 @@ import { Provider } from 'react-redux'
 import store from './utils/store.js'
 import BookDetails from './components/BookDetails.jsx'
 import AddBook from './components/AddBook.jsx'
+import ErrorElement from './components/ErrorElement.jsx'
 
 // creating a router configuration
 const appRouter = createBrowserRouter([
@@ -34,7 +35,7 @@ const appRouter = createBrowserRouter([
         element: <BookDetails />,
       }
     ],
-    errorElement: <div>404 Not Found</div>,
+    errorElement: <ErrorElement />,
   }
 ])
 
