@@ -9,7 +9,7 @@ import './App.css';
 function App() {
 
   // Using custom useFetch for fetching the data and storing in redux store
-  useFetch('/api/v1/books');
+  useFetch('https://www.freetestapi.com/api/v1/books');
 
   return (
     <div className='w-[100vw] flex flex-col items-center'>
