@@ -13,7 +13,7 @@
 - 🎯 Responsive design with Tailwind CSS
 - ⚛️ State management using Redux Toolkit
 - ❌ Error page handling with React Router
-- 🔍 Search/filter support (if added)
+- 🔍 Search/filter support
 
 ---
 
