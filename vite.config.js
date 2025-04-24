@@ -8,15 +8,17 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
-  // server: {
-  //   host: true,
-  //   port: 5173,
-  //   proxy: {
-  //     '/api': {
-  //       target: 'https://freetestapi.com',
-  //       changeOrigin: true,
-  //       rewrite: (path) => path.replace(/^\/api/, '/api')
-  //     }
-  //   }
-  // },
+
+  // Needed only for development
+  server: {
+    host: true,
+    port: 5173,
+    proxy: {
+      '/api': {
+        target: 'https://freetestapi.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '/api')
+      }
+    }
+  },
 })
