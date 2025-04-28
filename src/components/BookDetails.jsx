@@ -7,7 +7,7 @@ const BookDetails = () => {
     const navigate=useNavigate();
     const book=useSelector((state)=>state.data.books).filter((book)=>book.id==id)[0];
     const loading=useSelector((state)=>state.data.loading)
-    let rating=book?book.rating:4;
+    let rating=Math.random()*3+2;
     const ratingArray=[]
     for(let i=0; i<5; i++){
         if(rating>0){
@@ -50,6 +50,8 @@ const BookDetails = () => {
                 {/* Genre */}
                 <label className='text-gray-600 text-sm col-span-1 p-2'>genre: </label>
                 <p className='text-orange-500 text-lg col-span-3 p-2'>{book.genre}</p>
+
+                {/* Rating */}
                 <label className='text-gray-600 text-sm col-span-1 p-2'>rating: </label>
                 <div className='flex justify-around w-60 col-span-3 p-2'>
                     {ratingArray.map((star,i)=><img key={i} src={`/images/star${star}.png`} className='w-[10%]'/>)}
