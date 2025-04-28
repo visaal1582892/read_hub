@@ -80,4 +80,6 @@ const books=[
     { "id": 79, "title": "The Lord of the Rings", "author": "J.R.R. Tolkien", "publication_year": 1954, "genre": "Epic" },
     { "id": 80, "title": "The Catcher in the Rye", "author": "J.D. Salinger", "publication_year": 1951, "genre": "Fiction" }
   ]
+
+export default books;
   
