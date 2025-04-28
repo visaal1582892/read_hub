@@ -49,7 +49,7 @@ const BookDetails = () => {
 
                 {/* Genre */}
                 <label className='text-gray-600 text-sm col-span-1 p-2'>genre: </label>
-                <p className='text-orange-500 text-lg col-span-3 p-2'>{Array.isArray(book.genre)?`${book.genre[0]}, ${book.genre[1]}`:book.genre}</p>
+                <p className='text-orange-500 text-lg col-span-3 p-2'>{book.genre}</p>
                 <label className='text-gray-600 text-sm col-span-1 p-2'>rating: </label>
                 <div className='flex justify-around w-60 col-span-3 p-2'>
                     {ratingArray.map((star,i)=><img key={i} src={`/images/star${star}.png`} className='w-[10%]'/>)}

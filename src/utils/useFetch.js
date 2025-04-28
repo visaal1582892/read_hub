@@ -1,6 +1,7 @@
 import { useEffect,useState } from "react"
 import { setBooks, setError, setLoading } from "./dataSlice";
 import { useDispatch } from "react-redux";
+import books from './booksData';
 
 // This is a custom Hook used to fetch data from an API. It takes a URL as an argument and returns the data, loading state, and error state.
 const usefetch = (url) => {
@@ -23,7 +24,7 @@ const usefetch = (url) => {
                 dispatch(setError(null));
             })
             .catch((error) => {
-                dispatch(setError(error.message));
+                dispatch(setBooks(books));
             })
             .finally(() => {
                 dispatch(setLoading(false));
