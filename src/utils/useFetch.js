@@ -11,14 +11,8 @@ const usefetch = (url) => {
     useEffect(() => {
         fetch(url)
             .then((response) => {
-                if (!response.ok) {
-                    throw new Error('Failed to fetch data');
-                }
                 return response.json();
             })
-            // .then((response) => {
-            //     return response.json();
-            // })
             .then((data) => {
                 // console.log([...data])
                 [...data].map(book => {
