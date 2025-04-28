@@ -14,7 +14,7 @@ function App() {
   // useFetch('/api/v1/books');
 
   // For Deployment
-  useFetch('https://www.freetestapi.com/api/v1/books');
+  useFetch('/api/fetchBooks');
 
   return (
     <div className='w-[100vw] flex flex-col items-center'>
