@@ -10,6 +10,12 @@ const usefetch = (url) => {
     // Used useEffect to fetch data from the API when the component mounts or when the URL changes.
     useEffect(() => {
         fetch(url)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Failed to fetch data');
+                }
+                return response.json();
+            })
             // .then((response) => {
             //     return response.json();
             // })
