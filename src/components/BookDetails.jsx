@@ -7,7 +7,7 @@ const BookDetails = () => {
     const navigate=useNavigate();
     const book=useSelector((state)=>state.data.books).filter((book)=>book.id==id)[0];
     const loading=useSelector((state)=>state.data.loading)
-    let rating=Math.floor(Math.random())*3+2;
+    let rating=book.rating;
     const ratingArray=[]
     for(let i=0; i<5; i++){
         if(rating>0){
