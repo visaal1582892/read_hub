@@ -28,7 +28,7 @@ export default defineConfig({
     proxy: {
       '/api': {
         target: 'https://freetestapi.com',
-        changeOrigin: true,
+        // changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '/api')
       }
     }
