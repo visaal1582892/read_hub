@@ -9,8 +9,10 @@ const usefetch = (url) => {
 
     // Used useEffect to fetch data from the API when the component mounts or when the URL changes.
     useEffect(() => {
-        fetch(url)
-            .then((response) => {
+        fetch(url, {
+            method: 'GET',
+            mode: 'no-cors'
+        }).then((response) => {
                 return response.json();
             })
             .then((data) => {
