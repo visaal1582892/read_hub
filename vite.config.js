@@ -23,4 +23,14 @@ export default defineConfig({
   // },
 
   // For Deployment
+  server: {
+    port: 5173,
+    proxy: {
+      '/api': {
+        target: 'https://freetestapi.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '/api')
+      }
+    }
+  },
 })
